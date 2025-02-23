@@ -15,7 +15,7 @@ sudo tar xzvf ${list[0]}
 yes Y | sudo gala-node/install.sh
 
 ## Setting API-KEY (second argument in line)
-sudo gala-node config api-key ${2}
+sudo gala-node config api-key ${KEY}
 
 licenses=`sudo gala-node licenses`
 
@@ -27,7 +27,7 @@ do
 done
 
 ## Naming the Node (first argument in line)
-sudo gala-node rename ${1}
+sudo gala-node rename ${NAME}
 
 ## Starting the node
 sudo gala-node start 
