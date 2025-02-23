@@ -5,7 +5,7 @@ sudo wget --trust-server-names https://links.gala.com/DownloadLinuxNode
 shopt -s nullglob
 list=(~/gala-node*)
 ## echo "${list[0]}"
-sudo tar xzvf ${list[0]}.tar.gz
+sudo tar xzvf ${list[0]}
 
 yes Y | sudo gala-node/install.sh
 
