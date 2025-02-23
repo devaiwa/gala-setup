@@ -17,6 +17,7 @@ yes Y | sudo gala-node/install.sh
 ## Setting API-KEY (second argument in line)
 sudo gala-node config api-key ${KEY}
 
+echo "Key: ${KEY}"
 licenses=`sudo gala-node licenses`
 
 IFS=', ' read -r -a array <<< "$licenses"
