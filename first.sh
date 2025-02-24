@@ -14,4 +14,5 @@ sudo apt install docker.io -y
 sudo systemctl enable --now docker
 
 ## Rebooting    
-sudo reboot
+## sudo reboot
+echo "First Setup finished"
