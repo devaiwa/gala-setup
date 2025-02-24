@@ -1,8 +1,7 @@
 #!/bin/bash
-## Setup
-sudo NEEDRESTARTMODE=a apt update && sudo apt upgrade -y
+## Version 1.0
 
-##Getting Gala Node software
+## Getting Gala Node software
 sudo wget --trust-server-names https://links.gala.com/DownloadLinuxNode
 
 shopt -s nullglob
@@ -34,3 +33,4 @@ sudo gala-node rename ${NAME}
 sudo gala-node start 
 
 echo "Secondary Setup finished"
+echo "\n"
