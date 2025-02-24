@@ -5,7 +5,8 @@
 gettingip=`hostname -I`
 IFS='. ' read -r -a array <<< "$gettingip"
 ip=${array[3]}
-hostname="galanode-$ip-${NODEID}"
+hostname="galanode-$ip-$NODEID"
+echo "Hostname: $hostname"
 sudo hostnamectl set-hostname $hostname
 
 ## Docker Setup
