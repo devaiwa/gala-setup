@@ -13,8 +13,8 @@ IFS='. ' read -r -a array <<< "$gettingip"
 ip=${array[3]}
 
 ipall="$(hostname -I | cut -d" " -f1 | xargs)"
-
-hostname="galanode-$ip-$NODEID"
+full=$ip + "-" $NODEID
+hostname="galanode-$full"
 echo "Hostname: $hostname"
 hostnamectl set-hostname $hostname
 
