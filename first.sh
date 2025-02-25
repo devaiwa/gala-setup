@@ -8,13 +8,13 @@ rm /var/lib/dbus/machine-id
 dbus-uuidgen --ensure
 
 ## Hostname
-gettingip=`hostname -I`
-IFS='. ' read -r -a array <<< "$gettingip"
-ip=${array[3]}
+# gettingip=`hostname -I`
+# IFS='. ' read -r -a array <<< "$gettingip"
+# ip=${array[3]}
 
-ipall="$(hostname -I | cut -d" " -f1 | xargs)"
-full="${ip}-${NODEID}"
-hostname="galanode-$full"
+# ipall="$(hostname -I | cut -d" " -f1 | xargs)"
+# full="${ip}-${NODEID}"
+hostname="galanode-${NODEID}"
 echo "Hostname: $hostname"
 hostnamectl set-hostname $hostname
 
@@ -31,4 +31,4 @@ echo "First Setup finished. rebooting in 30 seconds"
 sleep 30
 echo "Rebooting now"
 ## Rebooting  
-sudo reboot
+##sudo reboot
