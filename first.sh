@@ -14,9 +14,9 @@ dbus-uuidgen --ensure
 
 # ipall="$(hostname -I | cut -d" " -f1 | xargs)"
 # full="${ip}-${NODEID}"
-hostname="galanode-${NODEID}"
-echo "Hostname: $hostname"
-hostnamectl set-hostname $hostname
+newname="galanode-$NODEID"
+echo "Hostname: $newname"
+hostnamectl set-hostname $newname
 
 ##echo "$ipall  $hostname" >> /etc/hosts
 
