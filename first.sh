@@ -6,6 +6,8 @@ rm -f /etc/machine-id
 dbus-uuidgen --ensure=/etc/machine-id
 rm /var/lib/dbus/machine-id
 dbus-uuidgen --ensure
+exit
+
 
 ## Hostname
 # gettingip=`hostname -I`
