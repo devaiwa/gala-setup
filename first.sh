@@ -2,11 +2,13 @@
 ## Version 1.0
 sudo su
 
+## Going to root
 rm -f /etc/machine-id
 dbus-uuidgen --ensure=/etc/machine-id
 rm /var/lib/dbus/machine-id
 dbus-uuidgen --ensure
 exit
+## exiting root
 
 
 ## Hostname
@@ -18,7 +20,7 @@ exit
 # full="${ip}-${NODEID}"
 echo "NodeID: $NODEID"
 
-newname="nodehosting-online$NODEID"
+newname="nodehosting-online-$NODEID"
 echo "Hostname: $newname"
 sudo hostnamectl set-hostname $newname
 
