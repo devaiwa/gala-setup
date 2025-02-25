@@ -27,6 +27,8 @@ sudo apt-get install virtualbox-guest-additions-iso -y
 sudo apt install docker.io -y
 sudo systemctl enable --now docker
 
-## Rebooting    
+echo "First Setup finished. rebooting in 30 seconds"
+sleep 30
+echo "Rebooting now"
+## Rebooting  
 sudo reboot
-echo "First Setup finished"
