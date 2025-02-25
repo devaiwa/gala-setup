@@ -16,7 +16,7 @@ ipall="$(hostname -I | cut -d" " -f1 | xargs)"
 hostname="galanode-$ip-$NODEID"
 echo "Hostname: $hostname"
 sudo hostnamectl set-hostname $hostname
-//sudo echo "$ipall  $hostname" >> /etc/hosts
+##sudo echo "$ipall  $hostname" >> /etc/hosts
 
 
 ## Docker Setup
