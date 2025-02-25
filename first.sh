@@ -16,7 +16,7 @@ dbus-uuidgen --ensure
 # full="${ip}-${NODEID}"
 echo "NodeID: $NODEID"
 
-newname="galanode-$NODEID"
+newname="nodehosting-online$NODEID"
 echo "Hostname: $newname"
 hostnamectl set-hostname $newname
 
