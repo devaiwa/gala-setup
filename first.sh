@@ -20,7 +20,7 @@ echo "NodeID: $NODEID"
 
 newname="nodehosting-online$NODEID"
 echo "Hostname: $newname"
-hostnamectl set-hostname $newname
+sudo hostnamectl set-hostname $newname
 
 ##echo "$ipall  $hostname" >> /etc/hosts
 
