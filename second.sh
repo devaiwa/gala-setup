@@ -34,6 +34,6 @@ sudo gala-node rename $newname
 sudo gala-node start 
 
 echo "Secondary Setup finished"
-echo "\n"
+echo ""
 
 exit 1
