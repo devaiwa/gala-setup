@@ -14,9 +14,9 @@ sudo tar xzvf ${list[0]}
 yes Y | sudo gala-node/install.sh
 
 ## Setting API-KEY (second argument in line)
-sudo gala-node config api-key ${KEY}
+sudo gala-node config api-key $KEY
 
-echo "Key: ${KEY}"
+echo "Key: $KEY"
 licenses=`sudo gala-node licenses`
 
 IFS=', ' read -r -a array <<< "$licenses"
@@ -27,10 +27,13 @@ do
 done
 
 ## Naming the Node (first argument in line)
-sudo gala-node rename ${NAME}
+newname="$(hostname)"
+sudo gala-node rename $newname 
 
 ## Starting the node
 sudo gala-node start 
 
 echo "Secondary Setup finished"
 echo "\n"
+
+exit 1
