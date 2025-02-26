@@ -29,7 +29,8 @@ sudo hostnamectl set-hostname $newname
 
 ## Docker Setup
 sudo NEEDRESTARTMODE=a apt update && sudo apt upgrade -y
-sudo apt-get install virtualbox-guest-additions-iso -y
+#sudo apt-get install virtualbox-guest-additions-iso -y
+#sudo add-apt-repository multiverse -y
 sudo apt install docker.io -y
 sudo systemctl enable --now docker
 
