@@ -34,6 +34,9 @@ sudo gala-node rename $newname
 sudo gala-node start 
 
 echo "Secondary Setup finished"
-echo ""
+echo "Sleeping for 5 minutes"
+sleep 300
+sudo gala-node status
+echo "DONE"
 
 exit 1
